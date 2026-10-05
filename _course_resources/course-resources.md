@@ -540,7 +540,7 @@ FROM
 # Snapshots
 
 ## Snapshots for listing
-The contents of `snapshots/raw_listins_snapshot.yml`:
+The contents of `snapshots/raw_listings_snapshot.yml`:
 ```yaml
 snapshots:
   - name: scd_raw_listings
