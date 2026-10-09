@@ -1,0 +1,44 @@
+-- 1. CTEs DE IMPORTACIÓN (Traemos los datos limpios usando la función ref)
+with clientes as (
+    select 
+        id_cliente,
+        nombre,
+        pais
+    from {{ ref('stg_clientes') }}
+),
+
+pedidos as (
+    select 
+        id_pedido,
+        id_cliente,
+        monto_total,
+        estado
+    from {{ ref('stg_pedidos') }}
+    where estado = 'completado' -- Filtramos directamente en la importación
+),
+
+-- 2. CTEs DE TRANSFORMACIÓN (Hacemos los cálculos agregados)
+resumen_pedidos as (
+    select
+        id_cliente,
+        count(id_pedido) as total_pedidos,
+        sum(monto_total) as monto_total_gastado,
+        min(monto_total) as pedido_mas_barato
+    from pedidos
+    group by 1
+),
+
+-- 3. CTE FINAL (Unimos la información para el resultado definitivo)
+final as (
+    select
+        clientes.id_cliente,
+        clientes.nombre,
+        clientes.pais,
+        coalesce(resumen_pedidos.total_pedidos, 0) as total_pedidos,
+        coalesce(resumen_pedidos.monto_total_gastado, 0) as total_gastado
+    from clientes
+    left join resumen_pedidos on clientes.id_cliente = resumen_pedidos.id_cliente
+)
+
+-- 4. CONSULTA DE SALIDA (Siempre un select * del bloque final)
+select * from final

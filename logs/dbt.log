@@ -1,0 +1,308 @@
+==================== 2026-10-07T13:29:35.925137Z | 01a1168e-21b3-7420-aa2f-cc68b103bdf3 ====================
+13:29:35.925386 [info ]: Installing dbt project and profile setup
+13:29:35.926413 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:29:35.926456 [info ]: Success Project created successfully!
+13:29:35.926466 [info ]: Info Project name: jaffle_shop
+13:29:35.926471 [info ]: Info Project directory: jaffle_shop
+13:30:01.404084 [error]: [IoError (dbt1001)]: Failed to get profile selection: IO error: read interrupted
+13:30:01.460474 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [25.5s]
+==================== 2026-10-07T13:30:03.194912Z | 01a1168e-8c39-7221-bb50-8a5a6bf68cd8 ====================
+13:30:03.195049 [info ]: Installing dbt project and profile setup
+13:30:03.195150 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_1' instead
+13:30:03.196061 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:30:03.196081 [info ]: Success Project created successfully!
+13:30:03.196089 [info ]: Info Project name: jaffle_shop_1
+13:30:03.196094 [info ]: Info Project directory: jaffle_shop_1
+13:30:11.244528 [info ]: Info Skipping profile setup.
+13:30:11.244604 [info ]: Validating profile inputs, adapters, and connection
+
+13:30:11.244657 [info ]: dbt 2.0.6
+13:30:11.245112 [info ]: Started loading project
+13:30:11.246518 [info ]: Loading ~/.dbt/profiles.yml
+13:30:11.246807 [info ]: Finished loading project [  0.00s]
+13:30:11.246895 [error]: [IoError (dbt1001)]: Profile 'jaffle_shop_1' not found in profiles.yml
+  --> ./dbt_project.yml:3:10
+13:30:11.286216 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [8.1s]
+==================== 2026-10-07T13:30:43.126013Z | 01a1168f-2832-74e3-949f-f21d34277a9a ====================
+13:30:43.126159 [info ]: Installing dbt project and profile setup
+13:30:43.126270 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_2' instead
+13:30:43.127201 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:30:43.127227 [info ]: Success Project created successfully!
+13:30:43.127233 [info ]: Info Project name: jaffle_shop_2
+13:30:43.127239 [info ]: Info Project directory: jaffle_shop_2
+13:30:49.731765 [info ]: Info Setting up your profile...
+13:30:49.731958 [info ]: Loading ~/.dbt/profiles.yml
+13:30:49.732204 [info ]: Info Creating new profile...
+13:38:29.301461 [info ]: Success Profile written to /home/msi/.dbt/profiles.yml
+13:38:29.301506 [info ]: Validating profile inputs, adapters, and connection
+
+13:38:29.301520 [info ]: dbt 2.0.6
+13:38:29.301636 [info ]: Started loading project
+13:38:29.302066 [info ]: Loading ~/.dbt/profiles.yml
+13:38:29.302348 [info ]: Finished loading project [  0.00s]
+13:38:29.302401 [info ]: Started debugging
+13:38:29.302422 [info ]: Debugging profile: dev
+13:38:29.302429 [info ]: Debugging dbt version: 2.0.6
+13:38:29.302434 [info ]: Debugging platform: linux x86_64 (unix)
+13:38:29.302442 [info ]: Debugging adapter type: snowflake (remote)
+13:38:29.303644 [info ]: Debugging dependencies:
+  git: OK
+13:38:29.303753 [info ]: Debugging connection:
+  "account": "https://fadjfvo-tk34325.snowflakecomputing.com",
+  "user": "camilogil87",
+  "database": "airbnb",
+  "warehouse": "COMPUTE_WH",
+  "schema": "RAW"
+13:38:29.304066 [debug]: Snowflake driver resolved: snowflake 0.21.0.dev+dbt0.21.18
+13:38:29.983038 [info ]: Debugging connection test: ERROR
+13:38:29.983101 [info ]: Finished debugging [  0.68s]
+13:38:29.983191 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `snowflake` adapter.
+The following error was returned:
+
+could not read private key file '/home/msi/dbt_projects': read /home/msi/dbt_projects: is a directory
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+13:38:30.063855 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [7m 47s]
+==================== 2026-10-07T13:39:18.557249Z | 01a11697-059b-7d13-a228-46d6a0320b6b ====================
+13:39:18.557396 [info ]: Installing dbt project and profile setup
+13:39:18.558382 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:39:18.558431 [info ]: Success Project created successfully!
+13:39:18.558443 [info ]: Info Project name: jaffle_shop
+13:39:18.558451 [info ]: Info Project directory: jaffle_shop
+13:43:10.346642 [error]: [IoError (dbt1001)]: Failed to get profile selection: IO error: read interrupted
+13:43:10.427449 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [3m 52s]
+[0m15:44:50.266180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x775b576897f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x775b5949ca50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x775b55feb890>]}
+
+
+============================== 15:44:50.267779 | 2f63b4e0-864c-415e-8609-2ed2d932706a ==============================
+[0m15:44:50.267779 [info ] [MainThread]: Running with dbt=1.12.5
+[0m15:44:50.268020 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'use_experimental_parser': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'static_parser': 'True', 'log_cache_events': 'False', 'hints_enabled': 'True', 'quiet': 'False', 'version_check': 'True', 'empty': 'None', 'write_json': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'log_format': 'default', 'printer_width': '80', 'maximum_seed_size_mib': '1', 'profiles_dir': '/home/msi/dbt_repositorio_estudio/dbt-student-repo', 'cache_selected_only': 'False', 'use_colors': 'True', 'log_path': 'logs', 'invocation_command': 'dbt init airbnb', 'debug': 'False', 'target_path': 'None'}
+[0m15:44:50.272115 [debug] [MainThread]: Starter project path: /home/msi/dbt_projects/dbt_env/lib/python3.14/site-packages/dbt/include/starter_project
+[0m15:44:50.272957 [info ] [MainThread]: Setting up your profile.
+[0m15:45:23.875447 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+list index out of range
+[0m15:45:23.877676 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/msi/dbt_projects/dbt_env/lib/python3.14/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/home/msi/dbt_projects/dbt_env/lib/python3.14/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "/home/msi/dbt_projects/dbt_env/lib/python3.14/site-packages/dbt/cli/main.py", line 504, in init
+    results = task.run()
+  File "/home/msi/dbt_projects/dbt_env/lib/python3.14/site-packages/dbt/task/init.py", line 363, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/msi/dbt_projects/dbt_env/lib/python3.14/site-packages/dbt/task/init.py", line 264, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/home/msi/dbt_projects/dbt_env/lib/python3.14/site-packages/dbt/task/init.py", line 246, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+[0m15:45:23.878897 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 33.65167, "process_in_blocks": "0", "process_kernel_time": 0.052999, "process_mem_max_rss": "120548", "process_out_blocks": "72", "process_user_time": 0.575997}
+[0m15:45:23.879514 [debug] [MainThread]: Command `dbt init` failed at 15:45:23.879401 after 33.65 seconds
+[0m15:45:23.879898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x775b560836f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x775b55ea8710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x775b55e719d0>]}
+[0m15:45:23.880324 [debug] [MainThread]: Flushing usage events
+[0m15:45:24.307978 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-10-07T13:48:19.365059Z | 01a1169f-4623-7572-9668-e0e03038b899 ====================
+13:48:19.365210 [info ]: Installing dbt project and profile setup
+13:48:19.366143 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:48:19.366202 [info ]: Success Project created successfully!
+13:48:19.366217 [info ]: Info Project name: jaffle_shop
+13:48:19.366224 [info ]: Info Project directory: jaffle_shop
+13:48:30.418784 [info ]: Info Setting up your profile...
+13:48:30.419016 [info ]: Loading ~/.dbt/profiles.yml
+13:48:30.419510 [info ]: Info Creating new profile...
+13:50:09.658350 [info ]: Success Profile written to /home/msi/.dbt/profiles.yml
+13:50:09.658452 [info ]: Validating profile inputs, adapters, and connection
+
+13:50:09.658479 [info ]: dbt 2.0.6
+13:50:09.658786 [info ]: Started loading project
+13:50:09.659895 [info ]: Loading ~/.dbt/profiles.yml
+13:50:09.660708 [info ]: Finished loading project [  0.00s]
+13:50:09.660832 [info ]: Started debugging
+13:50:09.660888 [info ]: Debugging profile: dev
+13:50:09.660910 [info ]: Debugging dbt version: 2.0.6
+13:50:09.660921 [info ]: Debugging platform: linux x86_64 (unix)
+13:50:09.660940 [info ]: Debugging adapter type: snowflake (remote)
+13:50:09.664067 [info ]: Debugging dependencies:
+  git: OK
+13:50:09.664250 [info ]: Debugging connection:
+  "account": "https://fadjfvo-tk34325.snowflakecomputing.com",
+  "user": "camilogil87",
+  "database": "airbnb",
+  "warehouse": "compute_wh",
+  "schema": "raw"
+13:50:09.665498 [info ]: Debugging connection test: ERROR
+13:50:09.665556 [info ]: Finished debugging [  0.00s]
+13:50:09.665675 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `snowflake` adapter.
+The following error was returned:
+
+Configuration Error: Could not read from key file: '/home/msi/dbt_projects'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+13:50:10.153676 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [1m 51s]
+==================== 2026-10-07T13:51:45.078476Z | 01a116a2-69b4-7f12-acc8-f3bddf53052d ====================
+13:51:45.078633 [info ]: Installing dbt project and profile setup
+13:51:45.078737 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_1' instead
+13:51:45.079560 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:51:45.079584 [info ]: Success Project created successfully!
+13:51:45.079588 [info ]: Info Project name: jaffle_shop_1
+13:51:45.079595 [info ]: Info Project directory: jaffle_shop_1
+13:51:50.248555 [info ]: Info Setting up your profile...
+13:51:50.248737 [info ]: Loading ~/.dbt/profiles.yml
+13:51:50.249116 [info ]: Info Creating new profile...
+13:53:37.619491 [info ]: Success Profile written to /home/msi/.dbt/profiles.yml
+13:53:37.619597 [info ]: Validating profile inputs, adapters, and connection
+
+13:53:37.619627 [info ]: dbt 2.0.6
+13:53:37.620006 [info ]: Started loading project
+13:53:37.621236 [info ]: Loading ~/.dbt/profiles.yml
+13:53:37.622116 [info ]: Finished loading project [  0.00s]
+13:53:37.622254 [info ]: Started debugging
+13:53:37.622313 [info ]: Debugging profile: dev
+13:53:37.622334 [info ]: Debugging dbt version: 2.0.6
+13:53:37.622346 [info ]: Debugging platform: linux x86_64 (unix)
+13:53:37.622367 [info ]: Debugging adapter type: snowflake (remote)
+13:53:37.624980 [info ]: Debugging dependencies:
+  git: OK
+13:53:37.625114 [info ]: Debugging connection:
+  "account": "https://fadjfvo-tk34325.snowflakecomputing.com",
+  "user": "camilogil87",
+  "database": "airbnb",
+  "warehouse": "compute_wh",
+  "schema": "raw"
+13:53:37.625836 [debug]: Snowflake driver resolved: snowflake 0.21.0.dev+dbt0.21.18
+13:53:37.641107 [info ]: Debugging connection test: ERROR
+13:53:37.641200 [info ]: Finished debugging [  0.02s]
+13:53:37.641295 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `snowflake` adapter.
+The following error was returned:
+
+parse "https://https:%2F%2Ffadjfvo-tk34325.snowflakecomputing.com.snowflakecomputing.com:443/session/v1/login-request?databaseName=airbnb&requestId=2ea658c2-6cba-4538-7ab6-7cdbd3bc7adc&request_guid=d109b868-aec0-413e-7715-a5b4741de52c&schemaName=raw&warehouse=compute_wh": invalid URL escape "%2F"
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+13:53:38.156953 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [1m 53s]
+==================== 2026-10-07T13:57:40.944068Z | 01a116a7-d7cd-7f20-a51e-4133af90fd7e ====================
+13:57:40.944207 [info ]: Installing dbt project and profile setup
+13:57:40.944296 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_2' instead
+13:57:40.945181 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:57:40.945202 [info ]: Success Project created successfully!
+13:57:40.945208 [info ]: Info Project name: jaffle_shop_2
+13:57:40.945215 [info ]: Info Project directory: jaffle_shop_2
+13:57:44.158818 [info ]: Info Setting up your profile...
+13:57:44.159107 [info ]: Loading ~/.dbt/profiles.yml
+13:57:44.160365 [info ]: Profile 'jaffle_shop_2' already exists. You can choose how to proceed.
+13:58:39.449540 [error]: [IoError (dbt1001)]: Failed to get selection: IO error: read interrupted
+13:58:39.511201 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [58.6s]
+==================== 2026-10-07T13:58:41.871461Z | 01a116a8-c5cd-7033-9dde-e796be379493 ====================
+13:58:41.871598 [info ]: Installing dbt project and profile setup
+13:58:41.872576 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:58:41.872624 [info ]: Success Project created successfully!
+13:58:41.872639 [info ]: Info Project name: jaffle_shop
+13:58:41.872651 [info ]: Info Project directory: jaffle_shop
+13:59:16.949897 [error]: [IoError (dbt1001)]: Failed to get profile selection: IO error: read interrupted
+13:59:16.995767 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [35.1s]
+==================== 2026-10-07T13:59:45.134916Z | 01a116a9-bced-7a71-bed1-f5449dcbd8e8 ====================
+13:59:45.135203 [info ]: Installing dbt project and profile setup
+13:59:45.136498 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:59:45.136540 [info ]: Success Project created successfully!
+13:59:45.136548 [info ]: Info Project name: jaffle_shop
+13:59:45.136554 [info ]: Info Project directory: jaffle_shop
+14:00:02.939063 [info ]: Info Using existing profile 'jaffle_shop'
+14:00:02.939428 [info ]: Success Set profile 'jaffle_shop' in dbt_project.yml
+14:00:02.939463 [info ]: Validating profile inputs, adapters, and connection
+
+14:00:02.939502 [info ]: dbt 2.0.6
+14:00:02.939823 [info ]: Started loading project
+14:00:02.941103 [info ]: Loading ~/.dbt/profiles.yml
+14:00:02.942004 [info ]: Finished loading project [  0.00s]
+14:00:02.942128 [info ]: Started debugging
+14:00:02.942203 [info ]: Debugging profile: dev
+14:00:02.942226 [info ]: Debugging dbt version: 2.0.6
+14:00:02.942237 [info ]: Debugging platform: linux x86_64 (unix)
+14:00:02.942276 [info ]: Debugging adapter type: snowflake (remote)
+14:00:02.945153 [info ]: Debugging dependencies:
+  git: OK
+14:00:02.945302 [info ]: Debugging connection:
+  "account": "https://fadjfvo-tk34325.snowflakecomputing.com",
+  "user": "camilogil87",
+  "database": "airbnb",
+  "warehouse": "compute_wh",
+  "schema": "raw"
+14:00:02.946538 [info ]: Debugging connection test: ERROR
+14:00:02.946623 [info ]: Finished debugging [  0.00s]
+14:00:02.946777 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `snowflake` adapter.
+The following error was returned:
+
+Configuration Error: Could not read from key file: '/home/msi/dbt_projects'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+14:00:03.160610 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [18.0s]
+==================== 2026-10-07T14:00:05.840627Z | 01a116aa-0dcf-7a02-8c79-f1e0bf6328f4 ====================
+14:00:05.840765 [info ]: Installing dbt project and profile setup
+14:00:05.840848 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_1' instead
+14:00:05.841756 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+14:00:05.841791 [info ]: Success Project created successfully!
+14:00:05.841798 [info ]: Info Project name: jaffle_shop_1
+14:00:05.841802 [info ]: Info Project directory: jaffle_shop_1
+14:00:13.559478 [info ]: Info Setting up your profile...
+14:00:13.559708 [info ]: Loading ~/.dbt/profiles.yml
+14:00:13.560577 [info ]: Profile 'jaffle_shop_1' already exists. You can choose how to proceed.
+14:00:22.438594 [info ]: Info Editing existing profile...
+14:00:23.969437 [info ]: Editing existing profile - skipping cloud config fetch
+14:01:53.130375 [info ]: Info Backup created at /home/msi/.dbt/profiles.yml.bkp
+14:01:53.130638 [info ]: Success Profile written to /home/msi/.dbt/profiles.yml
+14:01:53.130689 [info ]: Validating profile inputs, adapters, and connection
+
+14:01:53.130718 [info ]: dbt 2.0.6
+14:01:53.130961 [info ]: Started loading project
+14:01:53.131894 [info ]: Loading ~/.dbt/profiles.yml
+14:01:53.132452 [info ]: Finished loading project [  0.00s]
+14:01:53.132541 [info ]: Started debugging
+14:01:53.132570 [info ]: Debugging profile: dev
+14:01:53.132583 [info ]: Debugging dbt version: 2.0.6
+14:01:53.132590 [info ]: Debugging platform: linux x86_64 (unix)
+14:01:53.132610 [info ]: Debugging adapter type: snowflake (remote)
+14:01:53.135790 [info ]: Debugging dependencies:
+  git: OK
+14:01:53.135942 [info ]: Debugging connection:
+  "account": "fadjfvo-tk34325",
+  "user": "camilogil87",
+  "database": "airbnb",
+  "warehouse": "compute_wh",
+  "schema": "raw"
+14:01:53.136756 [debug]: Snowflake driver resolved: snowflake 0.21.0.dev+dbt0.21.18
+14:01:53.561366 [info ]: Debugging connection test: ERROR
+14:01:53.561527 [info ]: Finished debugging [  0.43s]
+14:01:53.561698 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `snowflake` adapter.
+The following error was returned:
+
+[Snowflake] 390144 (08004): JWT token is invalid.  [987cd886-7edf-45e5-b32c-b0a695af47fe]
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+14:01:53.612940 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [1m 48s]
