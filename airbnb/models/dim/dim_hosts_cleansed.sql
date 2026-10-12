@@ -1,3 +1,7 @@
+{{ 
+  config(
+    materialized = 'view') }} -- puedo convertir una tabla en vista usando config(materialized = 'view') 
+
 WITH src_hosts AS (
     SELECT
         *
