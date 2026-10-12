@@ -2,8 +2,8 @@ WITH raw_listings AS (
     SELECT
         *
     FROM
-        AIRBNB.RAW.RAW_LISTINGS
-)
+        {{ source('airbnb', 'listings') }}
+) --Luego de renombrar este modelo en el archivo source.yml puedo referenciar la tabla usando source() y el alias que le di en el archivo
 SELECT
     id AS listing_id,
     name AS listing_name,
