@@ -10,7 +10,7 @@ sources:
       - name: reviews
         identifier: raw_reviews
         config:
-          loaded_at_field: date
+          loaded_at_field: date # Es ña varoiable que indica la fecha de carga de los datos en la tabla, para poder hacer un control de frescura de los datos
           freshness:
-            warn_after: {count: 1, period: hour}
-            error_after: {count: 24, period: hour}
+            warn_after: {count: 1, period: hour} # Si los datos no se han actualizado en 1 hora, dbt va a mandar un warning
+            error_after: {count: 24, period: hour} # Si los datos no se han actualizado en 24 horas, dbt va a mandar un error
