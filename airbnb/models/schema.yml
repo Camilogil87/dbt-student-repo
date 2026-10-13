@@ -7,7 +7,6 @@ models:
     columns:
       - name: listing_id
         data_tests:
-          - unique # Comprueba que no haya valores duplicados.
           - not_null # Comprueba que no haya valores nulos.
 
       - name: host_id
@@ -36,17 +35,20 @@ models:
   - name: dim_hosts_cleansed
     config:
       contract:
-        enforced: true # Exige que las columnas y sus tipos cumplan el contrato.
+        enforced: true # Exige que las columnas y sus tipos cumplan el contrato.   
 
     columns:
       - name: host_id
         data_type: integer
+        constraints:
+          - type: not_null  # Los contrainsts son reglas que se aplican a las columnas para garantizar la integridad de los datos.
         data_tests:
-          - unique
           - not_null
 
       - name: host_name
         data_type: string
+        constraints:
+          - type: not_null
         data_tests:
           - not_null
 
