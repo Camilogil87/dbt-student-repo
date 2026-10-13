@@ -36,3 +36,7 @@ models:
       +materialized: table
     src:
       +materialized: ephemeral
+
+data_tests:
+  +store_failures: true # Esta configuracion ayuda a guardar los registros que no cumplen con las pruebas de calidad de datos en la BBDD.
+  +schema: _test_failures # Asigna un nombre de esquema para almacenar los registros que no cumplen con las pruebas de calidad.
