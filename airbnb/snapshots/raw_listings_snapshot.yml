@@ -1,0 +1,10 @@
+snapshots:
+    - name: sdc_raw_listings
+      relation: source('airbnb', 'listings')
+      config:
+        unique_key: id 
+        updated_at : updated_at
+        strategy: timestamp   # Con esta estrategia DBT verifica los cambios en la columnas updated_at
+        hard_deletes: invalidate # Invalida la eliminacion de registros.
+      #En la estrategia Check, serán varias columnas las que DBT tendra que verificar para ver si hay cambios y crear el nuevo registro
+      # Tambien es posible crear estrategias personalizadas usando macros (funciones personalizadas)
