@@ -1,20 +1,31 @@
---Configuracion de materializacion incremental
---En caso de que haya un cambio en el esquema, la ejecucion del modelo fallara
--- Puedes incluir incremental_strategy dentro de la configuracion y definir la unique_key.
-{{ 
+-- Configuración de materialización incremental.
+-- En caso de que haya un cambio en el esquema, la ejecución del modelo fallará.
+-- Puedes incluir incremental_strategy dentro de la configuración y definir la unique_key.
+{{
   config(
-    materialized = 'incremental', 
-    on_schema_change='fail' 
-    ) 
-
+    materialized='incremental',
+    on_schema_change='fail'
+  )
 }}
-WITH src_reviews AS (
-  SELECT * FROM {{ ref('src_reviews') }} -- Referenciamos el modelo src_reviews que contiene los datos crudos de las reseñas
-)
-SELECT * FROM src_reviews
-WHERE review_text is not null
 
-{% if is_incremental() %} -- is_incremental() es una función que verifica si el modelo se está ejecutando de manera incremental
-  AND review_date > (select max(review_date) from {{ this }}) -- Si el modelo se está ejecutando de manera incremental, 
-  -- solo seleccionamos las reseñas que tienen una fecha de reseña mayor a la fecha máxima de reseña en el modelo actual
-{% endif %} -- el this es una variable que hace referencia al modelo actual, en este caso fct_reviews
+WITH src_reviews AS (
+  -- Referenciamos el modelo src_reviews, que contiene los datos crudos de las reseñas.
+  SELECT * FROM {{ ref('src_reviews') }}
+)
+
+SELECT
+  {{ dbt_utils.generate_surrogate_key(['listing_id', 'review_date', 'reviewer_name', 'review_text']) }} AS review_id,
+  *
+FROM src_reviews
+WHERE review_text IS NOT NULL
+
+{% if is_incremental() %}
+  -- is_incremental() verifica si el modelo se está ejecutando de manera incremental.
+  -- Solo seleccionamos las reseñas con una fecha posterior a la fecha máxima
+  -- de las reseñas que ya existen en la tabla de destino.
+  -- this hace referencia al modelo actual, en este caso fct_reviews.
+  AND review_date > (
+    SELECT MAX(review_date)
+    FROM {{ this }}
+  )
+{% endif %}
