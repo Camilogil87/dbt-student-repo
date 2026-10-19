@@ -38,12 +38,14 @@ models:
 
 
   - name: dim_hosts_cleansed
+    description: '{{ doc("dim_host_cleansed") }}'
     config:
       contract:
         enforced: true # Exige que las columnas y sus tipos cumplan el contrato.   
 
     columns:
       - name: host_id
+        description: Primary key for the host
         data_type: integer
         constraints:
           - type: not_null  # Los contrainsts son reglas que se aplican a las columnas para garantizar la integridad de los datos.
@@ -51,6 +53,7 @@ models:
           - not_null
 
       - name: host_name
+        description: The host's name
         data_type: string
         constraints:
           - type: not_null
@@ -58,6 +61,7 @@ models:
           - not_null
 
       - name: is_superhost
+        description: Whether the host is a superhost or not
         data_type: string
         data_tests:
           - accepted_values:
@@ -65,9 +69,11 @@ models:
                 values: ['t', 'f']
 
       - name: updated_at
+        description: The last time the host's information was updated
         data_type: timestamp
 
       - name: created_at
+        description: The time the host was created
         data_type: timestamp
 
   - name: fct_reviews
