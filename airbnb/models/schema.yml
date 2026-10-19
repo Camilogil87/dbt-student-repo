@@ -1,15 +1,18 @@
 models:
   - name: dim_listings_cleansed
+    description: Cleansed table which contains Airbnb listings.
     data_tests:
       - minimum_row_count:
           arguments:
             min_row_count: 1000 # Comprueba que la tabla tenga al menos 1000 filas.
     columns:
       - name: listing_id
+        description: Primary key for the listing
         data_tests:
           - not_null # Comprueba que no haya valores nulos.
 
       - name: host_id
+        description: The host's id. References the host table.
         data_tests:
           - not_null
           - relationships: # Comprueba que el host exista en dim_hosts_cleansed.
@@ -18,6 +21,7 @@ models:
                 field: host_id
 
       - name: room_type
+        description: Type of the apartment / room
         data_tests:
           - accepted_values: # Solo permite los siguientes tipos de alojamiento.
               arguments:
@@ -28,6 +32,7 @@ models:
                   - 'Hotel room'
     
       - name:  minimum_nights
+        description: '{{ doc("dim_listing_cleansed__minimum_nights") }}'
         data_tests:
           - positive_values # Test generico singular para comprobar que los valores sean positivos.
 
