@@ -34,6 +34,8 @@ on-run-start:
 # files using the `{{ config(...) }}` macro.
 models:
   airbnb: # Config indicated by + and applies to all files under models/example/
+    +grants:
+      select: ["transform","reporter"]
     +post-hook:
       - "INSERT INTO {{ target.schema }}.audit_log VALUES ('{{ this }}', CURRENT_TIMESTAMP)"
     example:
